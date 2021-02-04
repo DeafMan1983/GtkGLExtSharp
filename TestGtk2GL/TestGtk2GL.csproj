@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD995E88-DAD2-47FA-B862-3192A4E3013E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestGtk2GL</RootNamespace>
+    <AssemblyName>TestGtk2GL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="pango-sharp">
+      <HintPath>..\..\..\..\..\usr\lib\cli\pango-sharp-2.0\pango-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="atk-sharp">
+      <HintPath>..\..\..\..\..\usr\lib\cli\atk-sharp-2.0\atk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdk-sharp">
+      <HintPath>..\..\..\..\..\usr\lib\cli\gdk-sharp-2.0\gdk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gtk-sharp">
+      <HintPath>..\..\..\..\..\usr\lib\cli\gtk-sharp-2.0\gtk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="glib-sharp">
+      <HintPath>..\..\..\..\..\usr\lib\cli\glib-sharp-2.0\glib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=1ca010269a4501ef">
+      <Package>tao-opengl-3.0</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GtkGLExtSharp\GtkGLExtSharp.csproj">
+      <Project>{3352E908-CAB6-4A16-9EF7-791125C675CB}</Project>
+      <Name>GtkGLExtSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

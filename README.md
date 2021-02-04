@@ -13,3 +13,5 @@ Sorry I don't care for Windows 10.
 
 It works finer under Ubuntu 18.04 with Latest Mono Runtime 6.x and Dotnet 3 / 5 too.
 
+# Screenshot:
+![ScreenShot](https://github.com/DeafMan1983/GtkGLExtSharp/blob/main/Screenshot%20from%202021-02-04%2012-16-53.png?raw=true)
